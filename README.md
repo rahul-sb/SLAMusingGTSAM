@@ -34,12 +34,11 @@ Note: You might get an error for different flight patterns if you run the same c
 
 ## Results
 
-![Side view of Result from DataMapping](https://drive.google.com/uc?export=view&id=1FUsxQDNVCCNPayYACJnE6xbJZk5DQaeZ)
 Side View from DataMapping dataset
+![Side view of Result from DataMapping](https://drive.google.com/uc?export=view&id=1FUsxQDNVCCNPayYACJnE6xbJZk5DQaeZ)
 
-![Side view of Result from DataMapping](https://drive.google.com/uc?export=view&id=1VRtdg9xIld4bH2ADVM27WGWV6DxUIHf7)
 Top View from DataMapping dataset
-
+![Side view of Result from DataMapping](https://drive.google.com/uc?export=view&id=1VRtdg9xIld4bH2ADVM27WGWV6DxUIHf7)
 
 *To have a look at results from other flight patterns have a look at the ProjectReport.pdf in the "/Results" folder.*
 
