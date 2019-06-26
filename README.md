@@ -6,7 +6,7 @@ of a robot equipped with onboard sensors, and the construction of a model (the m
 
 ## About Code
 
-A set of AprilTags of known dimension is placed on the ground. The location of the tags and their ID is unknown except for Tag 10, whose bottom left corner is chosen as the origin. The location of all the tags and the motion of quadcopter are to be found based on this origin. A quadcopter is being flown in a pattern so that it can see a subset of the tags at any given point in time. Using the images captured from a calibrated camera mounted on the quadcopter, the image coordinates of the subset of tags seen are found and their IDs are identified. With the image coordinates of the tags and the calibration parameters (arranged in a matrix) of the camera, the pose (orientation and location w.r.t the origin) is calculated using RPnP algorithm. With the pose of the quadcopter and the calibration matrix, the coordinates (w.r.t origin) of the remaining (previously unidentified) tags detected by the camera are calculated. This procedure is repeated for each image taken by the camera. A factor graph is then constructed with the set of poses of the quadcopter and the set of locations of the tags that are detected in each image. The graph is solved using a trust-region optimizer: Dogleg.
+A set of AprilTags of known dimension is placed on the ground. The location of the tags and their ID is unknown except for Tag 10, whose bottom left corner is chosen as the origin. The location of all the tags and the motion of quadcopter are to be found based on this origin. A quadcopter is being flown in a pattern so that it can see a subset of the tags at any given point in time. Using the images captured from a calibrated camera mounted on the quadcopter, the image coordinates of the subset of tags seen are found, and their IDs are identified. With the image coordinates of the tags and the calibration parameters (arranged in a matrix) of the camera, the pose (orientation and location w.r.t the origin) is calculated using RPnP algorithm. With the pose of the quadcopter and the calibration matrix, the coordinates (w.r.t origin) of the remaining (previously unidentified) tags detected by the camera are calculated. This procedure is repeated for each image taken by the camera. A factor graph is then constructed with the set of poses of the quadcopter and the set of locations of the tags that are detected in each image. The graph is solved using a trust-region optimizer: Dogleg.
 
 **_See ProjectOutline.pdf in "/docs" folder for a detailed description of the data and the project._**
 
@@ -40,6 +40,8 @@ Side View from DataMapping dataset
 Top View from DataMapping dataset
 ![Side view of Result from DataMapping](https://drive.google.com/uc?export=view&id=1VRtdg9xIld4bH2ADVM27WGWV6DxUIHf7)
 
+The green \* represents the corners of the tags. The blue \* represents the location of the quadcopter. The blue line that connects two blue \* represents the translation of quadcopter from one state to another. The three perpendicular lines on the blue \* represent the orientation of the quadcopter.
+
 *To have a look at results from other flight patterns have a look at the ProjectReport.pdf in the "/Results" folder.*
 
 
@@ -60,4 +62,4 @@ I also plan on to write a series of posts introducing readers to the field of ro
 
 [2] Factor Graph Tutorial, HU, Pili, Feb 29, 2012.
 
-[3] Factor Graphs for Robot Perception, Foundations and Trends in Robotics, Vol. 6, No. 1-2 (2017) 1–139, 2017 F. Dellaert and M. Kaess, DOI: 10.1561/2300000043
+[3] Factor Graphs for Robot Perception, Foundations, and Trends in Robotics, Vol. 6, No. 1-2 (2017) 1–139, 2017 F. Dellaert and M. Kaess, DOI: 10.1561/2300000043
